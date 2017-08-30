@@ -1,7 +1,10 @@
 <?php
 
 #Формируем ссылку для запроса
-$link='https://'.$subdomain.'.amocrm.ru/private/api/v2/json/leads/list';
+// $link='https://'.$subdomain.'.amocrm.ru/private/api/v2/json/leads/list';
+
+//Формирую ссылку для запроса с фильтром выборки сделок без задач
+$link='https://'.$subdomain.'.amocrm.ru/private/api/v2/json/contacts/list?closest_task[]=0';
 
 $curl=curl_init(); #Сохраняем дескриптор сеанса cURL
 #Устанавливаем необходимые опции для сеанса cURL
