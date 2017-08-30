@@ -5,7 +5,7 @@ $user=array(
 	'USER_HASH'=>'16d7953691364ef1ff4207702c429960' #Хэш для доступа к API (смотрите в профиле пользователя)
 );
 
-$subdomain='test'; #Наш аккаунт - поддомен
+$subdomain='new59a53e074f795'; #Наш аккаунт - поддомен
 #Формируем ссылку для запроса
 $link='https://'.$subdomain.'.amocrm.ru/private/api/auth.php?type=json';
 $curl=curl_init(); #Сохраняем дескриптор сеанса cURL
@@ -24,7 +24,7 @@ curl_setopt($curl,CURLOPT_SSL_VERIFYHOST,0);
 $out=curl_exec($curl); #Инициируем запрос к API и сохраняем ответ в переменную
 $code=curl_getinfo($curl,CURLINFO_HTTP_CODE); #Получим HTTP-код ответа сервера
 curl_close($curl); #Завершаем сеанс cURL
-CheckCurlResponse($code);
+CheckCurlResponse($code); #Проверка кода ответа сервера
 /**
  * Данные получаем в формате JSON, поэтому, для получения читаемых данных,
  * нам придётся перевести ответ в формат, понятный PHP
