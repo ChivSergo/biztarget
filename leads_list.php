@@ -28,5 +28,5 @@ $Response=json_decode($out,true);
 $leads_list=$Response['response'];
 
 // Раздел отладки
-echo '<pre>'; print_r($leads_list); echo '</pre>';
+// echo '<pre>'; print_r($leads_list); echo '</pre>';
 ?>
