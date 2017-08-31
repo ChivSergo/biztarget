@@ -2,8 +2,18 @@
 
 $leads_id = array();
 
+/*
 	foreach($leads_list['leads'] as $leads) {
 		array_push($leads_id, $leads['id']);
+	}
+*/
+	
+// Записываем в массив ID сделок, у которых нет задач.
+
+foreach($leads_list['leads'] as $leads) {
+		if ($leads['closest_task'] == 0) {
+			array_push($leads_id, $leads['id']);
+		}
 	}
 
 	

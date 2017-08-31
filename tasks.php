@@ -20,7 +20,7 @@ $tasks['request']['tasks']['add']=array(
 $tasks['request']['tasks']['add']=array();
 
 	foreach($leads_id as $id) {
-		array_push($tasks, array(
+		array_push($tasks['request']['tasks']['add'], array(
 								'element_id'=>$id, #ID сделки
 								'element_type'=>2, #Показываем, что это - сделка, а не контакт
 								'task_type'=>1, #Тип задачи - звонок
@@ -33,9 +33,7 @@ $tasks['request']['tasks']['add']=array();
 	
 	}
 
-
-
 // Раздел отладки
-echo '<pre>'; echo json_encode($tasks, JSON_PRETTY_PRINT); echo '</pre>';
+// echo '<pre>'; echo json_encode($tasks, JSON_PRETTY_PRINT); echo '</pre>';
 
 ?>

@@ -1,8 +1,8 @@
 <?php
 
 //Формирую ссылку для запроса с фильтром выборки сделок без задач
-$link='https://'.$subdomain.'.amocrm.ru/private/api/v2/json/leads/list?closest_task[]=0';
-
+$link='https://'.$subdomain.'.amocrm.ru/private/api/v2/json/leads/list';
+ 
 $curl=curl_init(); #Сохраняем дескриптор сеанса cURL
 #Устанавливаем необходимые опции для сеанса cURL
 curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);
