@@ -29,15 +29,12 @@ CheckCurlResponse($code); #Проверка кода ответа сервера
 $Response=json_decode($out,true);
 $Response=$Response['response']['tasks']['add'];
 
-/*
 $output='ID добавленных задач:'.PHP_EOL;
+
 foreach($Response as $v)
   if(is_array($v))
     $output.=$v['id'].PHP_EOL;
-return $output;
-*/
 
-// Раздел отладки
-echo '<pre>'; print_r($Response); echo '</pre>';
+echo $output;
 
 ?>
